@@ -7,7 +7,6 @@ const Num = (props) => {
 
     const handleClick = e => {
         const { value } = e.target;
-        console.log(value);
 
         dispatch(sendNumber(value));
     }

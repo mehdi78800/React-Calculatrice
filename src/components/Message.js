@@ -1,16 +1,15 @@
 import { useSelector } from 'react-redux';
 
 const Message = () => {
-    const {message, calcul} = useSelector(state => state);
+    const {message, calculs, count, number} = useSelector(state => state);
     
-    // console.log(number);
         return (
             <>
             <div className="alert alert-primary" role="alert">
                 {message} 
             </div>    
             <div className="alert alert-primary" role="alert">
-                {calcul} 
+                Calculez: {calculs[count]} = {number}
             </div>     
             </> 
         )
