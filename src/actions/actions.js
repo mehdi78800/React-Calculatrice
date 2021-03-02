@@ -1,4 +1,4 @@
-import {SEND_NUMBER, ERASE_NUMBER, CLEAR_NUMBER} from '../constants/action-type'
+import {SEND_NUMBER, SEND_CALCUL,SEND_ANSWER, ERASE_NUMBER, CLEAR_NUMBER, RESET} from '../constants/action-type'
 
 export const sendNumber = (payload) => {
 
@@ -7,6 +7,24 @@ export const sendNumber = (payload) => {
     }
     
 };
+
+export const sendCalcul = () => {
+
+    return {
+        type: SEND_CALCUL
+    }
+    
+};
+
+
+export const submitCalcul = () => {
+
+    return {
+        type: SEND_ANSWER
+    }
+    
+};
+
 
 export const eraseNumber = () => {
 
@@ -24,3 +42,11 @@ export const clearNumber = () => {
     
 };
     
+
+export const reset = () => {
+
+    return {
+        type: RESET
+    }
+    
+};
