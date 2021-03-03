@@ -7,6 +7,7 @@ import Clear from './components/Clear';
 import Go from './components/Go';
 import End from './components/End';
 import { useSelector } from 'react-redux';
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
 function App() {
   const {count} = useSelector(state => state);
