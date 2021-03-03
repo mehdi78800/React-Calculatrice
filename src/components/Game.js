@@ -8,49 +8,48 @@ import Go from '../components/Go';
 
 
 const Game = () => {
-    
 
-        return (
-            <>
+
+    return (
+        <>
             <div className="row">
-                <h1>Calcul mental!</h1>
-            </div>
-            <div className="row">
-                <div className="col-8">
+                <div className="col-md-8 mb-4">
                     <div className="row">
-                       <Message/>
+                        <Message />
                     </div>
-                    <div className="row">
-                        <Num number={7}/>
-                        <Num number={8}/>
-                        <Num number={9}/>  
-                    </div>
-                    <div className="row">
-                        <Num number={4}/>
-                        <Num number={5}/>
-                        <Num number={6}/>  
-                    </div>
-                    <div className="row">
-                        <Num number={1}/>
-                        <Num number={2}/>
-                        <Num number={3}/>  
-                    </div>
-                    <div className="row">
-                        <Num number={0}/>
-                        <Go />
-                    </div>
-                    <div className="row">
-                        <Erase />
-                        <Clear />
+                    <div className='col-12'>
+                        <div className="row justify-content-center">
+                            <Num number={7} />
+                            <Num number={8} />
+                            <Num number={9} />
+                        </div>
+                        <div className="row justify-content-center">
+                            <Num number={4} />
+                            <Num number={5} />
+                            <Num number={6} />
+                        </div>
+                        <div className="row justify-content-center">
+                            <Num number={1} />
+                            <Num number={2} />
+                            <Num number={3} />
+                        </div>
+                        <div className="row justify-content-center">
+                            <Num number={0} />
+                            <Go />
+                        </div>
+                        <div className="row justify-content-center">
+                            <Erase />
+                            <Clear />
+                        </div>
                     </div>
                 </div>
-                <div className="col-4">
+                <div className="col-md-4 ">
                     <Infos />
                 </div>
             </div>
         </>
-        )
-   
+    )
+
 }
 
 export default Game;

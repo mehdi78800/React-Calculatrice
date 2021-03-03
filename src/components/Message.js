@@ -21,7 +21,7 @@ const Message = () => {
         <div className={messageStyle} role="alert">
             {message} 
         </div>    
-        <div className="alert alert-primary " role="alert">
+        <div className="alert alert-primary col-12 text-center" role="alert">
             Calculez: {calculs} = {number} 
         </div>     
         </> 

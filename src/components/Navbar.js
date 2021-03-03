@@ -1,29 +1,40 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Navbar,Nav} from 'react-bootstrap'
 
-const Navbar = () => {
+const MyNavbar = () => {
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#">Navbar</a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                    <li className="nav-link">
-                        <Link className="nav-item active " to='/'>Home</Link>
-                    </li>
-                    <li className="nav-link">
-                        <Link className="nav-item " to='/game'>Game</Link>
-                    </li>
-                    <li className="nav-link">
-                        <Link className="nav-item " to='/score'>Score</Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        // <div className="row">
+        //     <nav className="navbar navbar-expand-md navbar-light bg-light col-12 mb-4">
+        //         <Link className="navbar-brand" to="/">Calcul Mental</Link>
+        //         <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+        //             <span className="navbar-toggler-icon"></span>
+        //         </button>
+        //         <div className="collapse navbar-collapse" id="navbarNav">
+        //             <ul className="navbar-nav mr-auto">
+        //                 <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
+        //                 <li className="nav-item"><Link className="nav-link" to="/game">Game</Link></li>
+        //                 <li className="nav-item"><Link className="nav-link" to="/score">Score</Link></li>
+        //             </ul>
+        //         </div>
+        //     </nav>
+        // </div>
+        <div className="row">
+            <Navbar className="col-12 mb-4" bg="dark" variant="dark" expand="lg" sticky="top">
+                <Link className="navbar-brand" to="/">Calcul Mental</Link>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/game">Game</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/score">Score</Link></li>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+        </div>
+
     )
 
 }
 
-export default Navbar;
+export default MyNavbar;

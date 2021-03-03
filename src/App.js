@@ -1,7 +1,7 @@
 import './App.css';
 
 import Home from './components/Home';
-import Navbar from './components/Navbar';
+import MyNavbar from './components/Navbar';
 import Game from './components/Game';
 import Score from './components/Score';
 
@@ -14,7 +14,7 @@ function App() {
     return (
       <div className="container">
         <Router>
-          <Navbar/>
+          <MyNavbar/>
           <Switch>
             <Route path="/" exact component={Home}/>
             <Route exact path="/game">
