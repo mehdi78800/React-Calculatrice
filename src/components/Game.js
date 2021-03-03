@@ -5,19 +5,10 @@ import Erase from '../components/Erase';
 import Clear from '../components/Clear';
 import Go from '../components/Go';
 
-import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
+
 
 const Game = () => {
     
-    const {count} = useSelector(state => state);
-
-    useEffect( () => {
-        if (count == 0) {
-            // window.location.replace("/score");
-            
-        }
-    }, [count]);
 
         return (
             <>
