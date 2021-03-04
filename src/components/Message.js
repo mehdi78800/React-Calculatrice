@@ -5,7 +5,7 @@ import { sendCalcul } from '../actions/actions';
 
 
 const Message = () => {
-    const {message, calculs, count, number, messageStyle} = useSelector(state => state);
+    const {message, calculs, count, number, messageStyle} = useSelector(state => state.calculReducer);
     const dispatch = useDispatch();
 
     useEffect( () => {

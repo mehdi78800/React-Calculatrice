@@ -4,14 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import calcul from './reducers/calcul';
-import { createStore } from 'redux';
+import reducer from './reducers/index';
+import middlewareFeedback from './middlewares/feedback';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux'; // permet de contextualiser le store Redux dans React
 
 import 'bootstrap/dist/css/bootstrap.css';
 
 // création du store => prêt pour l'App
-const store = createStore(calcul);
+const middlewares = [middlewareFeedback];
+const middlewareEnhancer = applyMiddleware(...middlewares);
+
+const store = createStore(reducer, middlewareEnhancer);
 
 ReactDOM.render(
   <React.StrictMode>

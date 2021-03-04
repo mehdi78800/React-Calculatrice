@@ -5,7 +5,7 @@ import { reset } from '../actions/actions';
 
 const Score = () => {
 
-    const {score} = useSelector(state => state);
+    const {score} = useSelector(state => state.calculReducer);
 
     const dispatch = useDispatch();
 

@@ -12,7 +12,7 @@ const stateInit = {
 }
 
 
-export default (state = stateInit, action = {}) => {
+const reducer = (state = stateInit, action = {}) => {
     const { number, calculs, count, score, messageStyle } = state;
 
     switch (action.type) {
@@ -84,3 +84,5 @@ export default (state = stateInit, action = {}) => {
         default: return state;
     }
 }
+
+export default reducer;

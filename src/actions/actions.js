@@ -1,4 +1,4 @@
-import {SEND_NUMBER, SEND_CALCUL,SEND_ANSWER, ERASE_NUMBER, CLEAR_NUMBER, RESET} from '../constants/action-type'
+import {SEND_NUMBER, SEND_CALCUL,SEND_ANSWER, ERASE_NUMBER, CLEAR_NUMBER, RESET, SET_FEEDBACK} from '../constants/action-type'
 
 export const sendNumber = (payload) => {
 
@@ -47,6 +47,14 @@ export const reset = () => {
 
     return {
         type: RESET
+    }
+    
+};
+
+export const setFeedback = (payload) => {
+
+    return {
+        type: SET_FEEDBACK, payload
     }
     
 };

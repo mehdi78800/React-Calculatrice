@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 const Infos = () => {
-    const {count, score} = useSelector(state => state);
+    const {count, score} = useSelector(state => state.calculReducer);
     
         return (
             <div className="card">

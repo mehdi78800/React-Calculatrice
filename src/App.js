@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 
 function App() {
-  const {count, calculs} = useSelector(state => state);
+  const {count, calculs} = useSelector(state => state.calculReducer);
 
     return (
       <div className="container">
